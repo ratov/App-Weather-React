@@ -1,0 +1,302 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.main {
+	position: relative;
+}
+
+.main::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url("https://fourtonfish.com/tutorials/weather-web-app/images/default.jpg") center/100% 100% no-repeat;
+	z-index: -1;
+}
+
+.weather__country {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.weather__city {
+	font-size: 25px;
+	letter-spacing: 1px;
+}
+
+.weather {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.weather__block {
+	width: 400px;
+	background-color: rgba(0, 255, 255, .6);
+	border-radius: 10px;
+	padding: 30px 25px;
+}
+
+.weather__title {
+	text-align: center;
+	font-style: italic;
+	color: slateblue;
+	font-size: 35px;
+	margin-bottom: 20px;
+}
+
+.weather__form {
+	display: flex;
+}
+
+input {
+	width: 65%;
+	height: 40px;
+}
+
+.weather__input {
+	padding-left: 10px;
+	background-color: transparent;
+	border: 1px solid black;
+	outline: none;
+	border-radius: 5px 0 0 5px;
+}
+
+.weather__btn {
+	border-radius: 0 5px 5px 0;
+	border: none;
+	cursor: pointer;
+	background-color: slateblue;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: .3s;
+}
+
+.weather__btn:hover {
+	background-color: transparent;
+	border: 1px solid #fff;
+}
+
+.weather__input::placeholder {
+	color: black;
+}
+
+button {
+	width: 35%;
+	height: 40px;
+}
+
+.weather__top {
+	margin: 20px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.weather__temp {
+	font-size: 70px;
+}
+
+.weather__temps {
+	display: flex;
+	align-items: center;
+}
+
+.weather__switch {
+	align-self: flex-start;
+	margin-left: 20px;
+	font-size: 24px;
+	display: flex;
+	column-gap: 10px;
+}
+
+span {
+	cursor: pointer;
+}
+
+span.active {
+	color: orangered;
+}
+
+.weather__description {
+	text-transform: uppercase;
+	color: blue;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.weather__time {
+	color: slateblue;
+	font-size: 22px;
+}
+
+.weather__humidity {
+	color: black;
+	font-size: 25px;
+	margin-top: 15px;
+}
+
+.weather__humidity-count {
+	font-size: 22px;
+	color: slateblue;
+}
+
+.weather__5day {
+	width: 200px;
+	height: 30px;
+	background-color: slateblue;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	display: block;
+	margin: 10px auto 0;
+	outline: none;
+	border-radius: 8px;
+	transition: all .5s ease;
+}
+
+.weather__5day:hover {
+	background-color: green;
+}
+
+.weather-five {
+	
+}
+
+.weather-five__main {
+	width: 200px;
+	height: 100px;
+	background-color: #fff;
+	padding: 10px 15px;
+	text-align: center;
+}
+
+.weather-five__main-date {
+	font-size: 20px;
+}
+
+.el {
+	margin-bottom: 30px;
+}
+
+.weather-five__menu {
+	display: none;
+}
+
+.weather-five__menu.active {
+	display: flex;
+	column-gap: 30px;
+	position: absolute;
+	left: 50px;
+	list-style-type: none;
+}
+
+.weather-five__menu-list {
+	width: 120px;
+	border: 1px solid #fff;
+	background-color: rgba(255, 255, 255, .2);
+	border-radius: 8px;
+	padding: 20px 15px;
+}
+
+.weather-five__row {
+	display: flex;
+	position: relative;
+}
+
+.weather-five__btn {
+	width: 120px;
+	height: 30px;
+	margin-bottom: 40px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	background-color: slateblue;
+	color: #fff;
+	font-size: 15px;
+	margin-left: 50px;
+	transition: .3s;
+}
+
+.weather-five__btn.active {
+	background-color: white;
+	color: slateblue;
+	transition: .3s;
+}
+
+.weather-five__btn:hover {
+	background-color: white;
+	color: slateblue;
+}
+
+.weather-five__menu-title {
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.weather-five__menu-temp {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.weather-five__back {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	width: 100px;
+	height: 30px;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #00000050;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.weather-five__current {
+	padding: 30px 0 0 50px;
+}
+
+.weather-five__title {
+	color: #fff;
+	font-size: 40px;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+}
+
+.weather-five__temp {
+	color: #fff;
+}
+
+.weather-five__switch {
+	font-size: 30px;
+}
+
+.weather-five__humidity, .weather-five__descr {
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.weather-five__descr {
+	margin-top: 15px;
+}
+
+.weather-five__row {
+	margin-top: 100px;
+}
